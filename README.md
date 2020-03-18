@@ -9,7 +9,7 @@ Checklist of things to consider and implement to protect your exposed web servic
 
 ## Authentication
 - [ ] Don't use Basic Auth for public/exposed endpoints. Use oAuth/OpenID.
-- [ ] Use account lock out
+- [x] Use account lock out (Assuming AD group filter works - HW)
 
 ### JSON Web Token (JWT)
 - [ ] Use a randomly generated long key also referred to as the `JWT Secret`
@@ -31,11 +31,11 @@ Checklist of things to consider and implement to protect your exposed web servic
 
 ## Input
 - [ ] Do not allow payloads bigger than expect
-- [ ] Sanitise all input validating type, length and content to avoid common vulnerabilities; `XSS`, `SQL-Injection`, etc.)
-- [ ] Use the proper HTTP method according to the operation: `GET`, `POST`, `PUT/PATCH`, `DELETE`
+- [x] Sanitise all input validating type, length and content to avoid common vulnerabilities; `XSS`, `SQL-Injection`, etc.)
+- [x] Use the proper HTTP method according to the operation: `GET`, `POST`, `PUT/PATCH`, `DELETE`
 - [ ] Validate `content-type` on request Accept header (Content Negotiation) to allow only your supported format; `application/json`, etc.)
 - [ ] Validate `content-type` of posted data as you accept; `application/x-www-form-urlencoded`, `application/json`, etc.).
-- [ ] Sensitive data must not be contained in URL. 
+- [x] Sensitive data must not be contained in URL. 
 - [ ] Consider obfuscation of URL strings.
 - [ ] Consider API Gateway services to enable caching, Rate Limit policies
 
